@@ -1,4 +1,4 @@
-# Installation of docker
+# 1. Installation of docker
 
 ## Install docker
 ```shell
@@ -15,11 +15,16 @@ docker --version
 sudo docker run hello-world
 ```
  
-# Build Custom Image
+# 2. Build Custom Image
 
 ## Create a file named "Dockerfile" with below content
 
 ```dockerfile
 FROM ubuntu:20.04
 
+```
+
+## Build the custom image
+```shell
+sudo docker build .
 ```
