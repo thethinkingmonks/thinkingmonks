@@ -15,5 +15,11 @@ docker --version
 sudo docker run hello-world
 ```
  
- 
+# Build Custom Image
 
+## Create a file named "Dockerfile" with below content
+
+```dockerfile
+FROM ubuntu:20.04
+
+```
