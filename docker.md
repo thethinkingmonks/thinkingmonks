@@ -35,7 +35,7 @@ RUN apt install -y vim
 sudo docker build .
 ```
 
-# Run the docker container
+# 3. Run the docker container
 
 ## Build the custom image and tag the image
 ```shell
@@ -72,7 +72,7 @@ sudo docker ps
 sudo docker -it ubuntu 
 ```
 
-# 3. Run an application
+# 4. Run an application
 
 ## Create a python application with below content
 
@@ -122,4 +122,14 @@ sudo docker run ubuntu
 ## Run the container in interactive mode
 ```shell
 sudo docker run -it ubuntu
+```
+# 5. Docker Volume
+
+## Build the custom image and tag the image
+```shell
+sudo docker build --tag ubuntu:latest .
+```
+## Run the container in interactive mode with volume
+```shell
+sudo docker run -it --volume data:/app ubuntu
 ```
