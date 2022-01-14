@@ -42,6 +42,9 @@ ssl_sslv3=NO
 sudo ufw allow 20/tcp
 sudo ufw allow 21/tcp
 ```
-
-
-
+# 2. Add SSH key
+```shell
+ssh-keygen -t rsa -b 4096 -C "thethinkingmonks@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
