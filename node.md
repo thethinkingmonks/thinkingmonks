@@ -2,7 +2,34 @@
 
 ## Install nodejs and npm
 ```shell
-sudo apt install -y nodejs npm
+sudo apt install -y build-essential nodejs npm 
+```
+
+## Install NVM
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+source ~/.bashrc
+```
+Note: Do not use sudo it will enable root access to nvm
+
+## List all the version of node
+```shell
+nvm list-remote
+```
+
+## List of node version installed in nvm
+```shell
+nvm list
+```
+
+## Install particular version of node in nvm
+```shell
+nvm install lts/fermium
+```
+
+## Switch between installed version of node
+```shell
+nvm use v14.10.0
 ```
 
 # 2. Project Creation
