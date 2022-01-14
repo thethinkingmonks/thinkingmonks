@@ -6,8 +6,9 @@ sudo apt install -y build-essential nodejs npm
 ```
 
 ## Install NVM
+Go the github repo https://github.com/nvm-sh/nvm to install the latest version of nvm
 ```shell
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
 ```
 Note: Do not use sudo it will enable root access to nvm
