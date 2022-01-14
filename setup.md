@@ -47,7 +47,7 @@ sudo ufw allow 21/tcp
 ```shell
 ssh-keygen -t rsa -b 4096 -C "thethinkingmonks@gmail.com"
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_rsa
 ```
 
 ## Add SSH key 
