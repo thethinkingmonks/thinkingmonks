@@ -56,3 +56,23 @@ Copy the below key and paste in github account
 cat ~/.ssh/id_ras.pub
 ```
 
+## Add username and email in git config
+```shell
+git config --global user.name "Thinking Monks"
+git config --global user.email "thethinkingmonks"
+git config --global core.editor "vim"
+git config --global merge.tool kdiff3
+```
+
+# Ngrok
+## Installation of Ngrok
+```shell
+curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null &&
+              echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list &&
+              sudo apt update && sudo apt install ngrok
+```
+
+## Running Ngrok
+```shell
+ngrok http 80
+```

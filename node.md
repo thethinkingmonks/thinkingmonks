@@ -40,3 +40,10 @@ npm init --yes
 npm config set init.author.name ThinkingMonks
 npm config set init.author.email thethinkingmonks@gmail.com
 ```
+
+## View the process of node application using pm2
+PM2 is a process manager for Node.js applications. PM2 makes it possible to daemonize applications so that they will run in the background as a service.
+
+```shell
+sudo npm install pm2@latest -g
+```
