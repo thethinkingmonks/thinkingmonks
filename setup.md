@@ -62,7 +62,14 @@ sudo ufw allow OpenSSH
 ```shell
 sudo openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem
 ```
-
+## Login into ftp to download file
+```shell
+ftp 192.168.0.113
+thinkingmonks
+lcd .
+get <filename>
+mget <filename1> <filename2>
+```
 ## Login into ftp
 
 # 2. Add SSH key
