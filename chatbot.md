@@ -20,3 +20,12 @@ pip install --timeout=10000 https://github.com/explosion/spacy-models/releases/d
 pip install --timeout=10000 https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.2.0/en_core_web_lg-3.2.0.tar.gz
 ```
 
+### List the installed spacy model
+```
+python -m spacy info
+```
+
+### Validate the installed spacy model
+```
+python -m spacy validate
+````
