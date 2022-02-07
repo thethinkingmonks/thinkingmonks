@@ -21,11 +21,17 @@ pip install --timeout=10000 https://github.com/explosion/spacy-models/releases/d
 ```
 
 ### List the installed spacy model
-```
+```shell
 python -m spacy info
 ```
 
 ### Validate the installed spacy model
-```
+```shell
 python -m spacy validate
-````
+```
+
+### List of available English SpaCy models
+```
+https://spacy.io/models/en
+```
+
