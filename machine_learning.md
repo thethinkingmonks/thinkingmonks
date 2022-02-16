@@ -89,10 +89,10 @@ Docker Compose yaml file
 ```yaml
 version: "3.9"
 services:
-  jupyter:
-    container_name: "jupyter"
+  jupyterlab:
+    container_name: "jupyterlab"
     build:
-      context: ./jupyter
+      context: ./jupyterlab
     ports:
       - "8899:8888"
     expose:
