@@ -94,13 +94,9 @@ services:
     build:
       context: ./jupyter
     ports:
-      - "10000:8888"
-      - "10100:10100"
-      - '8889:8889'
+      - "8899:8888"
     expose:
-      - 10000
-      - 10100
-      - 8889
+      - 8899
     user: root
     logging:
       options:
