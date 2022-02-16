@@ -33,15 +33,15 @@ conda create --name ml
 
 ```shell
 conda list scikit-learn
-conda install conda-forge scikit-learn
-pip install scikit-learn
+conda install -c conda-forge scikit-learn
 ```
 
 ## 1.5 Installation of Jupyter Notebook
 
 Install the classic Jupyter Notebook with:
 ```shell
-pip install notebook
+conda install -c conda-forge notebook
+conda install -c conda-forge nb_conda_kernels
 ```
 
 To run the notebook:
@@ -53,7 +53,8 @@ jupyter notebook
 
 Install JupyterLab with pip:
 ```shell
-pip install jupyterlab
+conda install -c conda-forge jupyterlab
+conda install -c conda-forge nb_conda_kernels
 ```
 
 Once installed, launch JupyterLab with:
