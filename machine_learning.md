@@ -80,14 +80,8 @@ RUN apt install -y net-tools
 USER 1000
 
 # Jupyter Lab Extensions
-RUN conda init bash
 RUN pip install jupyterlab_theme_solarized_dark
 RUN pip install jupyterlab-system-monitor
-RUN pip install --upgrade jupyterlab jupyterlab-git
-RUN pip install lckr-jupyterlab-variableinspector
-RUN pip install nbdime
-RUN pip install jupyterlab_latex
-RUN pip install jupyter-dash
 ```
 
 Docker Compose yaml file
@@ -118,5 +112,5 @@ services:
       - NB_GID=1000
       - CHOWN_HOME=yes
     volumes:
-      - ./jupyter/work:/home/thinkingmonks/work
+      - ./work:/home/thinkingmonks/work
 
