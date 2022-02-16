@@ -113,4 +113,9 @@ services:
       - CHOWN_HOME=yes
     volumes:
       - ./work:/home/thinkingmonks/work
+```
 
+## 1.8 Attach the conda environment to jupyter notebook
+```shell
+python -m ipykernel install --user --name=ml
+```
