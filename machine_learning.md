@@ -46,7 +46,7 @@ conda install -c conda-forge nb_conda_kernels
 
 To run the notebook:
 ```shell
-jupyter notebook
+jupyter notebook --ip=* --no-browser
 ```
 
 ## 1.6 Installation of JupyterLab
@@ -59,7 +59,7 @@ conda install -c conda-forge nb_conda_kernels
 
 Once installed, launch JupyterLab with:
 ```shell
-jupyter-lab
+jupyter-lab --ip=* --no-browser
 ```
 
 ## 1.7 Installation JupyterLab using Docker
