@@ -106,3 +106,64 @@ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trust
 ```shell
 ngrok http 80
 ```
+
+# 3. Setup Torrent CLI
+## 3.1 Installation
+
+```shell
+sudo add-apt-repository ppa:transmissionbt/ppa
+sudo apt-get update
+sudo apt-get install transmission-cli transmission-common transmission-daemon
+```
+
+## 3.2 Configure
+
+```shell
+sudo service transmission-daemon stop
+sudo vim /var/lib/transmission-daemon/info/settings.json
+```
+
+### Change below parameters
+```json
+{
+"rpc-password": "{62b16db87b89a91dd49a5110a7cafc06d20eb4f2wtK6kqPj",
+"rpc-username": "transmission",
+"rpc-whitelist": "127.0.0.1,192.168.*.*",
+"umask": 2,
+}
+```
+
+### Restart the service
+```shell
+sudo service transmission-daemon start
+```
+
+### Place the torrent file in below dir
+```shell
+/var/lib/transmission-daemon/downloads/
+sudo usermod -a -G debian-transmission thinkingmonks
+```
+
+### Starting and Stoping deamons
+```shell
+sudo service transmission-daemon start
+sudo service transmission-daemon stop
+sudo service transmission-daemon reload
+```
+
+### Bash Alias
+```bash
+alias t-start='sudo service transmission-daemon start'
+alias t-stop='sudo service transmission-daemon stop'
+alias t-reload='sudo service transmission-daemon reload'
+alias t-list='transmission-remote -n 'transmission:transmission' -l'
+alias t-basicstats='transmission-remote -n 'transmission:transmission' -st'
+alias t-fullstats='transmission-remote -n 'transmission:transmission' -si'
+```
+
+### To add a torrent to the daemon, use this command:
+```shell
+transmission-remote -n 'transmission:transmission' -a /var/lib/transmission-daemon/downloads/files.torrent
+```
+
+

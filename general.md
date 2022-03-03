@@ -6,7 +6,7 @@ www.ide.onelang.io
 https://carbon.now.sh
 
 
-## How to generate ssh in putty and use inside vm
+## 1. How to generate ssh in putty and use inside vm
 
 ### 1. Generate the public and private key
 
@@ -27,3 +27,21 @@ chmod 600 ~/.ssh/authorized_keys
 - Locate the id\_rsa.ppk private key and click Open.
 - Finally, click Open again to log into the remote server with key pair authentication.
 
+## 2. Vim
+
+### 2.1 Install Plugin
+```shell
+:PlugInstall
+```
+
+##  3. Doxygen Python Documentation Generator
+
+## 3.1 Installation
+```shell
+sudo apt install -y doxygen
+```
+
+## 3.2 Generate documentation
+```shell
+doxygen -g
+```
